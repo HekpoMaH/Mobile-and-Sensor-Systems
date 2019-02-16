@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1549663563 "s1.tex" "s1.pdf" "s1" 1549663564
+["pdflatex"] 1550329550 "s1.tex" "s1.pdf" "s1" 1550329550
   "/etc/texmf/web2c/texmf.cnf" 1548091285 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1480098696 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
@@ -161,11 +161,11 @@
   "images/hidden_terminal.png" 1549630908 42283 d6c6df94b93b76b4141e7d61767988b1 ""
   "images/hidden_terminal_soln.png" 1549632317 46401 7e6b4d3448793d72f274fd168afb3fd0 ""
   "images/two_phase_pull.png" 1549659355 27021 69131cbf9807fda14e23186252878921 ""
-  "s1.aux" 1549663564 662 b2b94621371df8d9296b8bf5bec1b851 ""
-  "s1.out" 1549663563 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "s1.tex" 1549663562 18837 efc87e069bbe6e1e5ec3715ea0901594 ""
+  "s1.aux" 1550329550 662 b2b94621371df8d9296b8bf5bec1b851 ""
+  "s1.out" 1550329550 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "s1.tex" 1550329549 20426 e8f39f6bff4eae617650664a9a4f9a31 ""
   (generated)
-  "s1.log"
   "s1.pdf"
-  "s1.aux"
+  "s1.log"
   "s1.out"
+  "s1.aux"

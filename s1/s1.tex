@@ -42,7 +42,7 @@ and the advantages of carrier sensing medium access.}
 Multiplexing is a way to share the medium by splitting into different time
 frames (time multiplexing) or frequency bands (frequency multiplexing) or some
 other way. However, depending on traffic some users may want to send more or
-less data, which cannot be handled just by multiplexing.
+less data, which cannot be handled just by frequency or time multiplexing.
 
 CSMA on the other hand first senses the medium and if sensed idle transmits the
 data. With Collision Avoidance (CA) (or CSMA/CD for ethernet) and even MACA to
@@ -61,7 +61,7 @@ Consider the following scenario:
     \includegraphics[width=250pt]{hidden_terminal.png}
 \end{figure}
 The transmission range of A reaches B, but not C (the detection range does
-notreach C either). The transmission range of C reaches B, but not A. Finally,
+not reach C either). The transmission range of C reaches B, but not A. Finally,
 thetransmission range of B reaches A and C, i.e., A cannot detect C and vice
 versa
 
@@ -92,7 +92,7 @@ a \textbf{request to send (RTS) first}. B receives the RTS that contains the
 name of sender and receiver, as well as the length of the future transmission.
 This RTS is not heard by C, but triggers an acknowledgement from B, called
 \textbf{clear to send (CTS)}. The CTS again contains the names of sender (A)
-and receiver (B) of the user data,and the length of the future transmission.
+and receiver (B) of the user data, and the length of the future transmission.
 This CTS is now heard by C and the medium for future use by A is now reserved
 for the duration of the transmission. After receiving a CTS, C is not allowed
 to send anything for the duration indicated in the CTS toward B. A collision
@@ -138,21 +138,22 @@ with epidemic routing).
 \textit{\circled{4.} Discuss in detail differences between infrastructure mode
 and ad hoc mode in wireless networks.}
 
-Most Wi-Fi networks function in infrastructure mode. All devices on the network
-communicate through a single \textbf{Access Point (AP)}, which is usually the
-wireless router. Even if the two devices are right next to each other, they
-will communicate through the AP. Infrastructure mode is ideal if you are
-setting up a more permanent network and would require you to purchase an AP.
+Most Wi-Fi networks function are in infrastructure mode. All devices on the
+network communicate through a single \textbf{Access Point (AP)}, which is
+usually the wireless router. Even if the two devices are right next to each
+other, they will communicate through the AP. Infrastructure mode is ideal if
+you are setting up a more permanent network and would require you to purchase
+an AP.
 
 In ad-hoc mode, each device communicates directly with each other. There is no
 centrall AP which controlls device communication, i.e. it is peer-to-peer.
-Ad-hoc mode can be easier to set up if you just want to connect a handful of
-devices to each other (or if you are in a cheap hotel without Wi-Fi but want to
-connect two laptops to each other). However, ad-hoc mode would require that
-devices pass the data through each other (no AP, remember) if they are not
-directly connected, which is slower than the Infrastructure mode option.
-
-(I can't seem to find any further details...)
+Devices are able to communicate only with other devices within the ad-hoc
+network. Ad-hoc mode can be easier to set up if you just want to connect
+a handful of devices to each other (or if you are in a cheap hotel without
+Wi-Fi but want to connect two laptops to each other). However, ad-hoc mode
+would require that devices pass the data through each other (no AP, remember)
+if they are not directly connected, which is slower than the Infrastructure
+mode option.
 \\
 \\
 \textit{\circled{5.} Routing in mobile networks can be adapted from fixed
@@ -211,7 +212,35 @@ for long enough transmission between the two nodes would be impossible.
 \textit{\circled{6.} Compare and contrast Epidemic routing and Probabilistic
 routing, with respect to overhead, latency and delivery success ratio. When is
 Epidemic routing not beatable as a delay tolerant protocol?}
-(I'm not sure Probabilistic routing has been taught.)
+
+Both protocols are DTN protocols, i.e. they store packages and retransmit at
+a later time than receive time.
+\\
+\\
+Overhead:\\
+There is storage overhead in both protocols, as both need to store transmission
+data. However, with CAR (according to the paper) the overhead is lower, since
+the number of messages sent will be lower (CAR relies on a single copy of the
+message in the network and is still able to outperform multi-copy protocols).
+Additionally, the utility of the prediction algorithm also helps to lower
+the number of retransmissions.
+\\
+\\
+Latency:\\
+Again, according to the results presented in the paper, CAR has slightly lower
+delay than epidemic routing, which will also result in lower latency.
+\\
+\\
+Delivery success ratio:\\
+The epidemic routing will be able to deliver all the messages if the buffer
+size is large enough to avoid the deletion of certain messages. CAR has higher
+delivery ratio when the buffer size is small. (According to the CAR paper, 
+CAR outperforms epidemic routing for buffers size less than 70.) 
+\\
+\\
+Epidemic routing should not be beatable when the parameters are tuned well.
+Also CAR won't be applicable in cases where we don't have any knowledge of
+the nodes (as probabilities based on movement, battery life, etc.).
 \\
 \\
 \textit{\circled{7.} Compare preamble sampling protocols (XMAC) to SMAC.}
@@ -221,23 +250,23 @@ energy consumption is the primary goal. Measurements have shown that idle
 listening consumes as much power as transmission. Both protocol try to reduce
 energy waste. SMAC is synchronous, XMAC not, as it will become obvious below.
 
-Given these facts, it is not necssary to keep nodes listening all the time, and
+Given these facts, it is not necessary to keep nodes listening all the time, and
 thus SMAC reduces the listen time by putting nodes into \emph{periodic} sleep
-state. In the sleep state the radio is completely turned off. Each node for
-some sleeps for some time and then wakes up and listens to see if any other
+state. In the sleep state the radio is completely turned off. Each node 
+sleeps for some time and then wakes up and listens to see if any other
 node wants to talk to it. During sleeping the node turns off its radio and sets
 a timer to wake up. All nodes are free to choose their own listen/sleep
 schedules, but to reduce control overhead, we prefer neighbouring nodes to
 synchronise together -- they listen at the same time and go to sleep at the
 same time. (Not all neighbouring nodes can synchronise together!) Nodes
 exchange their schedules periodically by broadcasting a SYNC packet to their
-intermediate neighbours. A node talks to its neighbours at their schedulet
+intermediate neighbours. A node talks to its neighbours at their scheduled
 listen time.
 
 For collision avoidance (apart from the RTS/CTS scheme), there is a duration
 field in each transmitted packet that indicates how long the remaining
-transmission will be.  Upon receiving a packet to another node, the receiver
-will node how long to keep silent from this field. Tthe node records this value
+transmission will be. Upon receiving a packet to another node, the receiver
+will note how long to keep silent from this field. The node records this value
 in the \textbf{Network Allocation Vector (NAV)} and sets a timer for it. On
 each timer tick the NAV is decremented, until it reaches 0. Before initiating
 a transmission a node first looks at the NAV, if it is >0, the node determines
@@ -260,16 +289,16 @@ When a node wakes up, it may decode the destination address and see if it is
 the intended recipient. If so, it uses the gaps in the preamble to send an ACK
 to the sender, which will in turn immediately transmit the payload.
 
-In terms of performance, SMAC trades off energy consumtion for perrformance
+In terms of performance, SMAC trades off energy consumption for performance
 reduction in both per-hop fairness and latency. On the other side XMAC has low
-latency and high throughput (the fact it is asyncronous, contributes to that).
+latency and high throughput (the fact it is asynchronous contributes to that).
 \\
 \\
 \textit{\circled{8.} Explain the salient characteristics of Directed Diffusion.
 What is the process through which it is able to reconfigure when sensor nodes
 fail in the network?}
 
-Directed Diffusion (DD) is actually moroe of a design philosophy than
+Directed Diffusion (DD) is actually more of a design philosophy than
 a concrete protocol. In DD data distribution starts by (sink) nodes announcing
 their \textbf{interests} in certain kinds of named data. These interest
 messages are distributed through the network. Given such an interest flood, it
@@ -286,7 +315,7 @@ same sink and have simply traveled via different paths:
 \end{figure}
 For a node X in the figure above here is, at first, only a single option --
 remember all neighbors from which an interest message has been received to,
-later on once data has been published, forward the actual data to all these
+later on, once data has been published, forward the actual data to all these
 neighbors. In the directed diffusion terminology, this is the setup of
 a \textbf{gradient} toward the sender of an interest. Each node stores, for
 each type of data received in an interest, in a \textbf{gradient cache}
@@ -311,7 +340,7 @@ data messages. If the same message comes in again -- irrespective of from the
 same or different originators -- it is silently discarded.
 
 Even with the data cache, more than one copy of the same data can be delivered
-to the sink, constituing some overhead. The gradient values, or more
+to the sink, constituting some overhead. The gradient values, or more
 specifically the rates associated with the gradients, provide a lever to solve
 this problem. A neighboring node that contributes new data messages (which
 cannot be found in the data cache) should be preferred over neighbors that only
@@ -341,16 +370,20 @@ asking for a higher data (thus modifying the gradient).
 \textit{\circled{10.} Describe Min-T routing and generally link based routing
 protocols.}
 
-(N.B. I'm struggling to find description of the protocol, googling "min-t
-protocol" gives nonsense. Please provide some resources. Thus, what I'm about
-to write will be non-sense as I'm trying to recall the information from the
-lecture notes.)
-
 In lossy networks, DVR using hop count only might underestimate costs as the
 closest path could be on a bad link and lots of retransmissions may occur.
-Thus, Min-T (Minimum Transmission) metric measues expected number of
-transmissions along the path. For each link Min-T cost is estimated by
-$\frac{1}{Forwad link quality}\times\frac{1}{Backward link quality}$ (Backward
-links are important for acks, etc.)
+Link routing protocols use various different metrics for estimating the quality
+of a link.
+
+Min-T (Minimum Transmission) is an example of a link quality based routing.
+With links of varying quality, a longer path with fewer retransmissions may be
+better than a shorter path with many retransmissions. An alternative is to use
+the expected number of  transmissions along the path as the cost metric for
+routing. That is, the best path is the one that minimizes the total number of
+transmissions (including retransmissions) in delivering a packet over
+potentially multiple hops to the destination.  Its metric measures expected
+number of transmissions along the path. For each link Min-T cost is estimated
+by $\frac{1}{Forwad~link~quality} \times \frac{1}{Backward~link~quality}$
+(Backward links are important for acks, etc.)
 
 \end{document}

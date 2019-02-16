@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.21)  8 FEB 2019 22:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.21)  16 FEB 2019 15:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -686,92 +686,106 @@ Underfull \hbox (badness 10000) in paragraph at lines 130--140
  []
 
 
-Overfull \hbox (1.8637pt too wide) in paragraph at lines 141--146
-[]\T1/lmr/m/n/12 (-20) Most Wi-Fi net-works func-tion in in-fras-truc-ture mode. All de-vices on the net-work com-mu-ni-cate
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 155--161
+Underfull \hbox (badness 10000) in paragraph at lines 148--162
 
  []
 
 <./images/dsdv_table.png, id=31, 760.8425pt x 590.205pt>
 File: ./images/dsdv_table.png Graphic file (type png)
 <use ./images/dsdv_table.png>
-Package pdftex.def Info: ./images/dsdv_table.png  used on input line 167.
+Package pdftex.def Info: ./images/dsdv_table.png  used on input line 168.
 (pdftex.def)             Requested size: 250.0pt x 193.93071pt.
 [3]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 180.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 181.
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 180.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 181.
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--218
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 206--218
+Underfull \hbox (badness 10000) in paragraph at lines 207--215
 
  []
 
 [4 <./images/dsdv_table.png>]
-Overfull \hbox (9.5052pt too wide) in paragraph at lines 219--223
+Underfull \hbox (badness 10000) in paragraph at lines 216--247
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--247
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--247
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--247
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--247
+
+ []
+
+
+Overfull \hbox (9.5052pt too wide) in paragraph at lines 248--252
 []\T1/lmr/m/n/12 (-20) Both are duty cy-cling pro-to-cols, de-signed for wire-less sen-sor net-works where en-ergy con-sump-tion
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 263--271
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 292--300
 
  []
 
-[5]
 <./images/two_phase_pull.png, id=47, 340.27126pt x 381.425pt>
 File: ./images/two_phase_pull.png Graphic file (type png)
 <use ./images/two_phase_pull.png>
-Package pdftex.def Info: ./images/two_phase_pull.png  used on input line 285.
+Package pdftex.def Info: ./images/two_phase_pull.png  used on input line 314.
 (pdftex.def)             Requested size: 200.0pt x 224.18906pt.
- [6 <./images/two_phase_pull.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 327--335
+[6] [7 <./images/two_phase_pull.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 356--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--343
+Underfull \hbox (badness 10000) in paragraph at lines 365--372
 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 353.
+(Font)              <12> on input line 386.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 353.
+(Font)              <8> on input line 386.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 353.
-[7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 356.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 356.
+(Font)              <6> on input line 386.
+[8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 389.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 389.
  (./s1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 356.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 356.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 389.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 389.
 Package rerunfilecheck Info: File `s1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 356.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 389.
  ) 
 Here is how much of TeX's memory you used:
- 19622 strings out of 494847
- 364145 string characters out of 6179080
- 455419 words of memory out of 5000000
+ 19627 strings out of 494847
+ 364193 string characters out of 6179080
+ 454419 words of memory out of 5000000
  22506 multiletter control sequences out of 15000+600000
- 50405 words of font info for 90 fonts, out of 8000000 for 9000
+ 50587 words of font info for 92 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  55i,7n,54p,435b,532s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on s1.pdf (7 pages, 355958 bytes).
+Output written on s1.pdf (8 pages, 357571 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
+ 101 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
+ 14 named destinations out of 1000 (max. 500000)
  16934 words of extra memory for PDF output out of 17280 (max. 10000000)
 
